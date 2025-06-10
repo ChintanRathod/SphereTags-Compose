@@ -1,6 +1,6 @@
 # Sphere Tags Compose 
 
-<img src ="art/SphereTags_ChintanRathod.gif" width=214 height=480> 
+<img src ="art/SphereTags_ChintanRathod.gif" width=432 height=432> 
 
 ## Overview  
 
