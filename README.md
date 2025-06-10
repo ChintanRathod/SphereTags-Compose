@@ -1,4 +1,4 @@
-# Sphere Tags Compose 
+# TagSphere - Jetpack Compose 
 
 <img src ="art/SphereTags_ChintanRathod.gif" width=432 height=432> 
 
