@@ -10,6 +10,26 @@ An Android library to implement an animated tags sphere
 - **Written in [Jetpack Compose](https://developer.android.com/compose)**
 - **Supports customization**
 
+## Dependency
+
+Add it in your settings.gradle.kts at the end of repositories:
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+```
+Then, add the library to your module build.gradle:
+
+```groovy
+dependencies {
+    implementation("com.github.ChintanRathod:TagSphere:LASTEST_RELEASE")
+}
+```
+
 ## Usage  
 ```kotlin
 SphereTags(
