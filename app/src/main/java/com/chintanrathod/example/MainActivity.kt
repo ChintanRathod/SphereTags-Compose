@@ -18,6 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.chintanrathod.example.ui.theme.SphereTagsTheme
 import com.chintanrathod.spheretags.SphereTags
+import kotlin.random.Random
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,10 +32,8 @@ class MainActivity : ComponentActivity() {
                     ) {
                         val context = LocalContext.current
 
-                        val tagsList = ArrayList<String>()
-                        for (i in 0 until 40) {
-                            tagsList.add("Tag $i")
-                        }
+                        val tagsList = generateRandomSyllableNames(40)
+
                         SphereTags(
                             radius = 400.00,
                             tags = tagsList,
@@ -51,18 +50,20 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+fun generateRandomSyllableNames(count: Int): List<String> {
+    val prefixes = listOf("An", "El", "Ka", "La", "Mi", "Nor", "Pen", "Quen", "Sar")
+    val middles = listOf("dra", "li", "ton", "vian", "mar", "ric", "lyn", "beth", "der")
+    val suffixes = listOf("a", "o", "lee", "e", "ian", "ia", "son", "ford")
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    SphereTagsTheme {
-        Greeting("Android")
+    val randomNames = mutableListOf<String>()
+    repeat(count) {
+        val name = StringBuilder()
+        name.append(prefixes.random(Random)) // Use random() for collection
+        if (Random.nextBoolean()) { // Sometimes add a middle part
+            name.append(middles.random(Random))
+        }
+        name.append(suffixes.random(Random))
+        randomNames.add(name.toString().replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }) // Ensure first letter is capitalized
     }
+    return randomNames
 }
