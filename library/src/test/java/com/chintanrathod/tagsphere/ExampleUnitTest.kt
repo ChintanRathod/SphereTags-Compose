@@ -1,4 +1,4 @@
-package com.chintanrathod.spheretags.example
+package com.chintanrathod.tagsphere
 
 import org.junit.Test
 

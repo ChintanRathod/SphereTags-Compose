@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.chintanrathod.spheretags"
+    namespace = "com.chintanrathod.tagsphere"
     compileSdk = 35
 
     defaultConfig {

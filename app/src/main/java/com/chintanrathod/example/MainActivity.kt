@@ -14,7 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.sp
 import com.chintanrathod.example.ui.theme.SphereTagsTheme
-import com.chintanrathod.spheretags.SphereTags
+import com.chintanrathod.tagsphere.TagSphere
 import kotlin.random.Random
 
 class MainActivity : ComponentActivity() {
@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
 
                         val tagsList = generateRandomSyllableNames(40)
 
-                        SphereTags(
+                        TagSphere(
                             radius = 400.00,
                             tags = tagsList,
                             textColor = android.graphics.Color.BLACK,

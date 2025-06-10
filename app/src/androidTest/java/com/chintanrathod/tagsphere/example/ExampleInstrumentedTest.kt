@@ -1,4 +1,4 @@
-package com.chintanrathod.spheretags.example
+package com.chintanrathod.tagsphere.example
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

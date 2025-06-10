@@ -1,4 +1,4 @@
-package com.chintanrathod.spheretags
+package com.chintanrathod.tagsphere
 
 import android.graphics.Paint
 import androidx.compose.foundation.Canvas
@@ -35,7 +35,7 @@ data class Tag3D(
  * @param selectedTag: a clickable callback when tag is clicked
  */
 @Composable
-fun SphereTags(
+fun TagSphere(
     radius: Double,
     tags: List<String>,
     textColor: Int,
