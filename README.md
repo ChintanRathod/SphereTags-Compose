@@ -32,7 +32,7 @@ If you find any problems or would like to suggest a feature, please feel free to
 
 ## License
 
-    Copyright 2020 Chintan Rathod
+    Copyright 2025 Chintan Rathod
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

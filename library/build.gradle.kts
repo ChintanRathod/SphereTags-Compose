@@ -5,7 +5,7 @@ plugins {
     id("maven-publish")
 }
 
-group = "com.github.chintanrathod" // <-- Your GitHub username
+group = "com.github.chintanrathod"
 version = "0.0.1"
 
 android {
