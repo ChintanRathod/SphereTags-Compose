@@ -2,7 +2,11 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("maven-publish")
 }
+
+group = "com.github.chintanrathod" // <-- Your GitHub username
+version = "0.0.1"
 
 android {
     namespace = "com.chintanrathod.tagsphere"
@@ -30,6 +34,19 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.github.chintanrathod"
+                artifactId = "tagsphere"
+                version = "0.0.1"
+            }
+        }
     }
 }
 
